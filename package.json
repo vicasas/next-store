@@ -10,6 +10,7 @@
     "test:ci": "jest --passWithNoTests --ci",
     "test:watch": "jest --watch",
     "test:snap": "jest --updateSnapshot",
+    "test:coverage": "jest --passWithNoTests --coverage",
     "eslint": "eslint --fix --no-inline-config \"**/*.+(js|jsx|ts|tsx)\"",
     "prettier": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|css)\""
   },
