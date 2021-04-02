@@ -1,5 +1,29 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import ProductCard from '../components/ProductCard'
+
+const products = [
+  {
+    id: 1,
+    name: 'Product 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+]
 
 export default function Home() {
   return (
@@ -20,25 +44,13 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href='#!' className={styles.card}>
-            <h3>Product 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </a>
-
-          <a href='#!' className={styles.card}>
-            <h3>Product 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </a>
-
-          <a href='#!' className={styles.card}>
-            <h3>Product 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </a>
-
-          <a href='#!' className={styles.card}>
-            <h3>Product 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </a>
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              name={product.name}
+              description={product.description}
+            />
+          ))}
         </div>
       </main>
 
